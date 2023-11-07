@@ -1,0 +1,86 @@
+@media screen and (max-width: 475px){
+    form{
+    
+        height: 620px;
+        width: 100%;
+        font-family: sans-serif;
+       
+    
+    }
+    .contenedor{
+    
+        height: 600px;
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    
+    }
+    .titulo {
+         
+        width: 80%;
+        height: 40px;
+        margin-top: 50px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    h3 {
+    
+        font-size: 25px;
+        
+    }
+    .formulario{
+    
+        height: 380px;
+        width: 240px;
+        border-radius: 25px;
+        background-color: rgb(214, 243, 248);
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+       
+    }
+    .form-check{
+    
+        width: 150px;
+        height: 35px;
+    
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    
+    }
+    input{
+    
+        width: 25px;
+        height: 25px;
+        clip-path: circle(50% at 50% 50%);
+        background-color: rgb(244, 241, 241);
+       
+    }
+    .form-check-input{
+    
+        clip-path: circle(50% at 50% 50%);
+        border-radius: 50px;
+    }
+    label{
+    
+        height: 20px;
+        width: 80px;
+        margin-top: 5px;
+    
+    }
+    button{
+    
+        width: 215px;
+    }
+    }
