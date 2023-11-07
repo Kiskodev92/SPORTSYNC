@@ -9,6 +9,7 @@ import { ComLoginComponent } from './component/com-login/com-login.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './component/header/header.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
+import { EventPageComponent } from './pages/event-page/event-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
     ComLoginComponent,
     LoginComponent,
     HeaderComponent,
-    NavBarComponent
+    NavBarComponent,
+    EventPageComponent,
   ],
   imports: [
     BrowserModule,
