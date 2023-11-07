@@ -13,6 +13,8 @@ import { FormRegisterDeporteComponent } from './component/form-register-deporte/
 import { RegisterDeporteComponent } from './pages/register-deporte/register-deporte.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RegisterComponent } from './pages/register/register.component';
     FormRegisterDeporteComponent,
     RegisterDeporteComponent,
     FormRegisterComponent,
-    RegisterComponent
+    RegisterComponent,
+    PerfilComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,
