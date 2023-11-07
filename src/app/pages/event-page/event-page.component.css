@@ -5,11 +5,15 @@
     font-family: sans-serif;
 }
 @media screen and (max-width: 450px){
+    body{
+        margin-bottom: 10%;
+    }
     form{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
         padding-bottom: 2%;
     }
     div{
