@@ -18,6 +18,8 @@
     
     h1{
       margin-right: 100px;
+      font-weight: bold;
+      text-shadow: 4px 4px 3px rgb(111, 111, 111);
     }
     
     a{

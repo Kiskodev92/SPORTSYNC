@@ -9,6 +9,7 @@ import { ComLoginComponent } from './component/com-login/com-login.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './component/header/header.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
+import { EventPageComponent } from './pages/event-page/event-page.component';
 import { FormRegisterDeporteComponent } from './component/form-register-deporte/form-register-deporte.component';
 import { RegisterDeporteComponent } from './pages/register-deporte/register-deporte.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
@@ -23,6 +24,7 @@ import { RegisterComponent } from './pages/register/register.component';
     LoginComponent,
     HeaderComponent,
     NavBarComponent,
+    EventPageComponent,,
     FormRegisterDeporteComponent,
     RegisterDeporteComponent,
     FormRegisterComponent,
