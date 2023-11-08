@@ -5,14 +5,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RegisterDeporteComponent } from './pages/register-deporte/register-deporte.component';
 import { EventPageComponent } from './pages/event-page/event-page.component';
+import { AjustesComponent } from './pages/ajustes/ajustes.component';
 
 
 const routes: Routes = [
-  {path: 'home', component:HomeComponent},
+  {path: '', component:HomeComponent},
   {path: 'login', component:LoginComponent},
   {path: 'register ', component:RegisterComponent},
   {path:'register-deporte', component:RegisterDeporteComponent},
   {path:'even-page', component:EventPageComponent},
+  {path: 'ajustes', component:AjustesComponent}
   
 ];
 
