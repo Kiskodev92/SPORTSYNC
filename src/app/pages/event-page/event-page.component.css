@@ -50,4 +50,9 @@
         color: white;
         font-weight: bold;
     }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        margin-top: 8%;
+    }
 }
