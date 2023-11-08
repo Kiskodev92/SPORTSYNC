@@ -14,11 +14,7 @@ import { FormRegisterDeporteComponent } from './component/form-register-deporte/
 import { RegisterDeporteComponent } from './pages/register-deporte/register-deporte.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { AjustesComponent } from './pages/ajustes/ajustes.component';
 import { RouterModule } from '@angular/router';
-
-
-import { ExploreComponent } from './pages/explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +29,7 @@ import { ExploreComponent } from './pages/explore/explore.component';
     FormRegisterDeporteComponent,
     RegisterDeporteComponent,
     FormRegisterComponent,
-    RegisterComponent,
-    AjustesComponent,
-    ExploreComponent
+    RegisterComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
