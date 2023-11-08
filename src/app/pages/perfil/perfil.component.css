@@ -1,0 +1,180 @@
+@media screen and (max-width: 475px){
+
+    main{
+    
+        height: 575px;
+        width: 100%;
+        font-family: sans-serif;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    
+    }
+    .fotoBoton{
+        
+        height: 100px;
+        width: 270px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+    }
+    .imagen{
+
+        height: 95px;
+        width: 82px;
+        border-radius: 50%;
+    
+    }
+    .imgPerfil{
+
+        height: 95px;
+        width: 82px;
+        border-radius: 50%;
+    
+    }
+    .info{
+
+        height: 95px;
+        width: 180px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+
+    }
+    .infoPerfil{
+
+        width: 180px;
+        height: 60px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+    }
+    .fotos-Subidas{
+
+        height: 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    p{
+
+        height: 2px;
+        font-size: small;
+    }
+    .datos{
+
+        height: 95px;
+        width: 260px;
+        padding-left: 5px;
+        
+    }
+    .Nombre{
+
+        font-size: medium;
+        font-weight: bold;
+    }
+    .Sport{
+
+        font-size: small;
+
+    }
+    .description{
+
+        font-size: small;
+    }
+    .eventSeguid{
+
+        height: 50px;
+        width: 270px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+    }
+    .btn-event{
+        background-color: #6db3d1;
+        color: white;
+        width: 105px;
+        height: 23px;
+        border-radius: 15px;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-event:hover{
+
+        background-color: black;
+        color: white;
+    }
+    .card{
+
+        height: 280px;
+        width: 250px;
+        background-color: rgb(214, 243, 248);
+
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .card-img{
+        margin-top: 5px;
+        margin-left: 14px;
+        width: 220px;
+        height: 150px;
+    }
+    .card-body{
+        
+        height: 50px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .card-title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .btn{
+
+        color: white;
+        width: 105px;
+        height: 23px;
+        border-radius: 15px;
+        font-size: 12px;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+          
+    }
+    .btn:hover{
+
+        background-color:#6db3d1;
+        color: white;
+    }
+
+}
