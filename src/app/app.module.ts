@@ -15,10 +15,14 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './component/card/card.component';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { AjustesComponent } from './pages/ajustes/ajustes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AjustesComponent,
     CardComponent,
     HomeComponent,
     ComLoginComponent,
@@ -30,8 +34,10 @@ import { ExploreComponent } from './pages/explore/explore.component';
     RegisterDeporteComponent,
     FormRegisterComponent,
     RegisterComponent,
-    ExploreComponent
-  ],schemas:[CUSTOM_ELEMENTS_SCHEMA],
+    ExploreComponent,
+    PerfilComponent,
+    EditarPerfilComponent
+  ],
   
   imports: [
     RouterModule,

@@ -7,6 +7,8 @@ import { RegisterDeporteComponent } from './pages/register-deporte/register-depo
 import { EventPageComponent } from './pages/event-page/event-page.component';
 import { AjustesComponent } from './pages/ajustes/ajustes.component';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 
 
 const routes: Routes = [
@@ -16,7 +18,11 @@ const routes: Routes = [
   {path:'register-deporte', component:RegisterDeporteComponent},
   {path:'event', component:EventPageComponent},
   {path: 'ajustes', component:AjustesComponent},
-  {path: 'explore', component:ExploreComponent}
+  {path: 'explore', component:ExploreComponent},
+  {path: 'perfil', component:PerfilComponent},
+  {path: 'editar-perfil', component:EditarPerfilComponent},
+
+
   
 ];
 
