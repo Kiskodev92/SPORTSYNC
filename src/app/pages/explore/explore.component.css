@@ -5,27 +5,36 @@
     font-family: sans-serif;
 }
 @media screen and (max-width: 450px){
-div{
+.container{
+    width: 100%;
+    padding: 5%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 5%;
+}
+.search{
+    width: 84%;
+    background: rgb(244, 241, 241);
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px 20px;
 }
 input{
-    width: 65%;
-    border-radius: 15px;
-    background-color: rgb(244, 241, 241);
-    padding-left: 3%;
-    margin-left: 2%;
+    background: transparent;
+    flex:1;
+    border:none;
+    outline: none;
+
 }
 button{
+    height: 5%;
     width: 10%;
-    border-radius: 15px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    background-color: rgb(214, 243, 248);
+    border:none;
+    cursor:pointer;
 }
-button:hover{
-    color: white;
-    background-color: black;
+img{    
+    width: 100%;
+    border-radius: 50%;
 }
 }
