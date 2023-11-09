@@ -15,6 +15,7 @@ import { RegisterDeporteComponent } from './pages/register-deporte/register-depo
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RouterModule } from '@angular/router';
+import { ExploreComponent } from './pages/explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RouterModule } from '@angular/router';
     FormRegisterDeporteComponent,
     RegisterDeporteComponent,
     FormRegisterComponent,
-    RegisterComponent
+    RegisterComponent,
+    ExploreComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
