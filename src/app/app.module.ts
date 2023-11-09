@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,9 @@ import { FormRegisterComponent } from './component/form-register/form-register.c
 import { RegisterComponent } from './pages/register/register.component';
 import { RouterModule } from '@angular/router';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { AjustesComponent } from './pages/ajustes/ajustes.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +34,12 @@ import { ExploreComponent } from './pages/explore/explore.component';
     RegisterDeporteComponent,
     FormRegisterComponent,
     RegisterComponent,
-    ExploreComponent
+    ExploreComponent,
+    PerfilComponent,
+    AjustesComponent,
+    EditarPerfilComponent
   ],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+
   imports: [
     RouterModule,
     BrowserModule,
