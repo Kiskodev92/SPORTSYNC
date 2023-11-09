@@ -14,6 +14,7 @@ import { FormRegisterComponent } from './component/form-register/form-register.c
 import { RegisterComponent } from './pages/register/register.component';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './component/card/card.component';
+import { ExploreComponent } from './pages/explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -28,15 +29,16 @@ import { CardComponent } from './component/card/card.component';
     FormRegisterDeporteComponent,
     RegisterDeporteComponent,
     FormRegisterComponent,
-    RegisterComponent
-  ],
+    RegisterComponent,
+    ExploreComponent
+  ],schemas:[CUSTOM_ELEMENTS_SCHEMA],
   
   imports: [
     RouterModule,
     BrowserModule,
     AppRoutingModule
   ],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
