@@ -2,7 +2,7 @@
 
     form{
     
-        height: 620px;
+        height: 840px;
         width: 100%;
         font-family: sans-serif;
        
@@ -10,14 +10,16 @@
     }
     .contenedor{
     
-        height: 600px;
+        height: 780px;
         width: 100%;
+        padding-top: 30px;
     
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:flex-start;
         align-items: center;
-        gap: 15px;
+        gap: 30px;
+    
     }
     .logo{
     
@@ -49,9 +51,10 @@
     .formulario{
     
         height: 460px;
-        width: 240px;
+        width: 280px;
         border-radius: 25px;
         padding-top: 5px;
+        margin-top: 5px;
         background-color: rgb(214, 243, 248);
     
         display: flex;
@@ -60,10 +63,10 @@
     }
     input{
     
-        width: 215px;
+        width: 250px;
         height: 30px;
         border-radius: 15px;
-        margin-left: 11px;
+        margin-left: 15px;
         background-color: rgb(244, 241, 241);
     
     }
@@ -71,7 +74,7 @@
     
         height: 20px;
         width: 160px;
-        margin-left: 18px;
+        margin-left: 25px;
         margin-top: 5px;
         
     
@@ -81,6 +84,7 @@
         width: 215px;
         margin-left: 11px;
         margin-top: 30px;
+        border-radius: 10px;
         
     }
     
