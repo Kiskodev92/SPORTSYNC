@@ -1,7 +1,7 @@
 @media screen and (max-width: 475px){
     form{
     
-        height: 620px;
+        height: 840px;
         width: 100%;
         font-family: sans-serif;
        
@@ -9,7 +9,7 @@
     }
     .contenedor{
     
-        height: 600px;
+        height: 635px;
         width: 100%;
     
         display: flex;
@@ -32,13 +32,14 @@
     }
     h3 {
     
-        font-size: 25px;
+        font-size: 30px;
+        font-weight: bold;
         
     }
     .formulario{
     
-        height: 380px;
-        width: 240px;
+        height: 400px;
+        width: 280px;
         border-radius: 25px;
         background-color: rgb(214, 243, 248);
     
@@ -51,18 +52,19 @@
     }
     .form-check{
     
-        width: 150px;
+        width: 170px;
         height: 35px;
     
         display: flex;
+        justify-content: flex-start;
         align-items: center;
         gap: 10px;
     
     }
     input{
     
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         clip-path: circle(50% at 50% 50%);
         background-color: rgb(244, 241, 241);
        
@@ -74,13 +76,15 @@
     }
     label{
     
-        height: 20px;
+        height: 25px;
         width: 80px;
-        margin-top: 5px;
+        font-size: 25px;
+        margin-bottom: 5px;
     
     }
     button{
     
-        width: 215px;
+        width: 250px;
+        border-radius: 10px;
     }
     }
