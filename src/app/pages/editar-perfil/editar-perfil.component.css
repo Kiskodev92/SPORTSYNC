@@ -2,7 +2,7 @@
 
     main{
     
-        height: 600px;
+        height: 640px;
         width: 100%;
         font-family: sans-serif;
     
@@ -27,30 +27,33 @@
     
         font-family: sans-serif;
         font-weight:bold;
+        font-size: 30px;
     
     }
     h6{
 
         font-weight: bold;
         font-family: sans-serif;
-        padding-left: 20px;
+        font-size: 22px;
+        padding-left: 12px;
         text-shadow: 4px 4px 3px rgb(174, 172, 172);
     }
     .formulario{
     
         height: 360px;
-        width: 240px;
+        width: 340px;
         
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 5px;
        
     }
     .formul{
 
         height: 360px;
-        width: 240px;
-        border-radius: 10px;
+        width: 330px;
+        border-radius: 15px;
         padding-top: 10px;
         margin-left: 5px;
         background-color: rgb(214, 243, 248);
@@ -63,7 +66,7 @@
     }
     input{
     
-        width: 210px;
+        width: 290px;
         height: 35px;
         margin-right: 22px;
         border-radius: 15px;
@@ -81,7 +84,7 @@
     }
     .boton{
     
-        width: 220px;
+        width: 250px;
         height: 100px;
 
         display: flex;
@@ -93,8 +96,8 @@
     }
     button{
 
-        width: 215px;
-        border-radius: 15px;
+        width: 250px;
+        border-radius: 10px;
         border: none;
         
     }

@@ -1,8 +1,12 @@
 @media screen and (max-width: 475px){
+    *{
+        padding: 0;
+        margin: 0;
+    }
 
     main{
     
-        height: 575px;
+        height: 594.8px;
         width: 100%;
         font-family: sans-serif;
     
@@ -10,57 +14,58 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5px;
+        gap: 7px;
     
     }
     .fotoBoton{
         
-        height: 100px;
-        width: 270px;
+        height: 130px;
+        width: 360px;
+        margin-top: 15px;
 
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 4px;
+        gap: 7px;
 
     }
     .imagen{
 
-        height: 95px;
-        width: 82px;
+        height: 110px;
+        width: 110px;
         border-radius: 50%;
     
     }
     .imgPerfil{
 
-        height: 95px;
-        width: 82px;
+        height: 110px;
+        width: 110px;
         border-radius: 50%;
     
     }
     .info{
 
-        height: 95px;
-        width: 180px;
+        height: 110px;
+        width: 240px;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 6px;
+        gap: 12px;
 
     }
     .infoPerfil{
 
-        width: 180px;
+        width: 235px;
         height: 60px;
 
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 12px;
+        gap: 18px;
 
     }
     .fotos-Subidas{
@@ -73,49 +78,59 @@
         align-items: center;
 
     }
-    p{
+    .total{
 
-        height: 2px;
-        font-size: small;
+        height: 20px;
+        font-size: 19px;
+    }
+    .nomb{
+
+        font-size:19px;
+        height: 20px;
     }
     .datos{
 
-        height: 95px;
-        width: 260px;
+        height: 120px;
+        width: 360px;
         padding-left: 5px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         
     }
     .Nombre{
 
-        font-size: medium;
+        font-size: 25px;
         font-weight: bold;
     }
     .Sport{
 
-        font-size: small;
+        font-size: 16px;
 
     }
     .description{
 
-        font-size: small;
+        font-size: 16px;
     }
     .eventSeguid{
 
-        height: 50px;
-        width: 270px;
+        height: 45px;
+        width: 360px;
+
 
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 25px;
 
     }
     .btn-event{
         background-color: #6db3d1;
         color: white;
-        width: 105px;
-        height: 23px;
+        width: 125px;
+        height: 32px;
         border-radius: 15px;
         border: none;
 
@@ -130,24 +145,26 @@
     }
     .card{
 
-        height: 280px;
+        height: 350px;
         width: 250px;
+        margin-bottom: 5px;
         background-color: rgb(214, 243, 248);
 
         display: flex;
         flex-direction: column;
+        gap: 5px;
     
     }
     .card-img{
         margin-top: 5px;
-        margin-left: 14px;
-        width: 220px;
+        margin-left: 4px;
+        width: 240px;
         height: 150px;
     }
     .card-body{
         
         height: 50px;
-        font-size: 12px;
+        font-size: 15px;
         display: flex;
         flex-direction: column;
     
@@ -156,14 +173,19 @@
         text-align: center;
         font-weight: bold;
         font-size: 15px;
+        margin-top: 5px;
+    }
+    .card-text{
+
+        margin-top: 10px;
     }
     .btn{
 
         color: white;
-        width: 105px;
-        height: 23px;
+        width: 117px;
+        height: 30px;
         border-radius: 15px;
-        font-size: 12px;
+        font-size: 17px;
         border: none;
 
         display: flex;
