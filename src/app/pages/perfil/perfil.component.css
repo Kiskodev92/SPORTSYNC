@@ -96,7 +96,8 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
-        
+        margin-bottom: 5%;
+
     }
     .Nombre{
 
@@ -123,6 +124,7 @@
         justify-content: center;
         align-items: center;
         gap: 25px;
+        margin-bottom: 5%;
 
     }
     .btn-event{
