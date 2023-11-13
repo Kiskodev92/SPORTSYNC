@@ -37,7 +37,9 @@ import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.compo
     ExploreComponent,
     PerfilComponent,
     AjustesComponent,
-    EditarPerfilComponent
+    EditarPerfilComponent,
+    FormRegisterComponent,
+    FormRegisterDeporteComponent
   ],
 
   imports: [

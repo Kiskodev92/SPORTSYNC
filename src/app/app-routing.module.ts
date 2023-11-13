@@ -14,16 +14,13 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'login', component:LoginComponent},
-  {path: 'register ', component:RegisterComponent},
+  {path: 'register', component:RegisterComponent},
   {path:'register-deporte', component:RegisterDeporteComponent},
   {path:'event', component:EventPageComponent},
   {path: 'ajustes', component:AjustesComponent},
   {path: 'explore', component:ExploreComponent},
   {path: 'perfil', component:PerfilComponent},
-  {path: 'editar-perfil', component:EditarPerfilComponent},
-
-
-  
+  {path: 'editar-perfil', component:EditarPerfilComponent}
 ];
 
 @NgModule({
