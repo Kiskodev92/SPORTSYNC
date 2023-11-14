@@ -20,6 +20,7 @@ import { ExploreComponent } from './pages/explore/explore.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AjustesComponent } from './pages/ajustes/ajustes.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { EventComponent } from './sahred/event/event.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.compo
     AjustesComponent,
     EditarPerfilComponent,
     FormRegisterComponent,
-    FormRegisterDeporteComponent
+    FormRegisterDeporteComponent,
+    EventComponent
   ],
 
   imports: [
