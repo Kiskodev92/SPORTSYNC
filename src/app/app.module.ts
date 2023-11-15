@@ -1,7 +1,11 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CardComponent } from './component/card/card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ComLoginComponent } from './component/com-login/com-login.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -13,16 +17,14 @@ import { RegisterDeporteComponent } from './pages/register-deporte/register-depo
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RouterModule } from '@angular/router';
-import { CardComponent } from './component/card/card.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
-import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 import { AjustesComponent } from './pages/ajustes/ajustes.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AjustesComponent,
     CardComponent,
     HomeComponent,
     ComLoginComponent,
@@ -36,18 +38,22 @@ import { AjustesComponent } from './pages/ajustes/ajustes.component';
     RegisterComponent,
     ExploreComponent,
     PerfilComponent,
-    EditarPerfilComponent
+    AjustesComponent,
+    EditarPerfilComponent,
+    FormRegisterComponent,
+    FormRegisterDeporteComponent,
+   
   ],
-  
+
   imports: [
     RouterModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-

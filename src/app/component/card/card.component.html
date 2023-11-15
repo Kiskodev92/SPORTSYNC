@@ -1,36 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+
 <body>
   <div class="card" style="width: 18rem;">
-    <img src="https://www.inercia.com/blog/wp-content/uploads/2023/02/ponerse-en-forma-con-los-patines.jpg" class="card-img-top">
+    <img src={{event.foto}} class="card-img-top">
     <div class="card-body">
-      <h5 class="card-title">Ruta Alamillo</h5>
-      <p class="card-text">15 Abril<br>Ruta de patinaje por el parque del Alamilo y la zona de Barqueta</p>
-      <button class="btn btn-dark">Unirse</button>
+    <h5 class="card-title">{{event.titulo}}</h5>
+    <p class="card-text">{{event.fecha}}<br>{{event.descripcion}}</p>
+    <button class="btn btn-dark">Unirse</button>
     </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="https://imagenes.heraldo.es/files/image_990_v3/uploads/imagenes/2021/09/02/la-nueva-apariencia-del-parque-san-martin-de-huesca.jpeg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Partido Basket Jerez</h5>
-    <p class="card-text">22 Mayo<br>Se organiza partido de baloncesto en el polideportivo Angora de Jerez.</p>
-    <button class="btn btn-dark">Unirse</button>
   </div>
-</div>
-
-<div class="card" style="width: 18rem;">
-  <img src="https://www.diariodesevilla.es/2021/09/24/sevilla/bafle-rodante-Nocturna-musica-competicion_1613850013_144355934_667x375.jpg" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title">Carrera nocturna</h5>
-    <p class="card-text">25 Septiembre<br>XXXVII carrera nocturna alrededor del centro de Sevilla</p>
-    <button class="btn btn-dark">Unirse</button>
-  </div>
-</div>
 </body>
-</html>

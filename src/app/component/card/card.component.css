@@ -5,8 +5,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15%;
+    margin: 5%;
 }
+
+
+
 @media screen and (max-width: 475px){
 .card{
     background-color: rgb(214, 243, 248);
@@ -39,4 +42,19 @@ img{
     color:black;
     background-color: rgb(0, 166, 255);
 }
+.carta{
+    width: 18rem;
+    background-color: rgb(150, 219, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+img{
+    margin-left: 2.5%;
+}
+.row{
+    width: 100%;
+    display: flex;
+}
+
 }
