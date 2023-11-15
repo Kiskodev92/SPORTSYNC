@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,6 @@ import { ExploreComponent } from './pages/explore/explore.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AjustesComponent } from './pages/ajustes/ajustes.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
-import { EventComponent } from './sahred/event/event.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { EventComponent } from './sahred/event/event.component';
     EditarPerfilComponent,
     FormRegisterComponent,
     FormRegisterDeporteComponent,
-    EventComponent
+   
   ],
 
   imports: [
@@ -50,7 +50,8 @@ import { EventComponent } from './sahred/event/event.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
