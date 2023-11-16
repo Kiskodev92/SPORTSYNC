@@ -1,10 +1,25 @@
 <body>
 <div class="container">
   <form action="" class="search">
-    <input type="text" placeholder="Explora eventos....">
-    <button><img src="./../../../assets/Lupa2.jpg"></button>
+    <input type="text" placeholder="Explora eventos...." #event>
+    <button type="button" (click)="buscar(event.value)"><img src="./../../../assets/Lupa2.jpg"></button>
   </form>
 </div>
-  <app-card></app-card>
+<div *ngIf="home.length != 0; else lista">
+
+ 
+  <div id="card">
+      <ng-container *ngFor="let cardEvent of home">
+          
+        <app-card [event]="cardEvent"></app-card>
+      </ng-container>
+
+  </div>
+
+
+</div>
+<ng-template #lista>
+  <h1>NO HAY EVENTOS</h1>
+</ng-template>
 
 </body>

@@ -20,14 +20,10 @@ const routes: Routes = [
   {path: 'ajustes', component:AjustesComponent},
   {path: 'explore', component:ExploreComponent},
   {path: 'perfil', component:PerfilComponent},
-<<<<<<< HEAD
-  {path: 'editar-perfil', component:EditarPerfilComponent}
-=======
   {path: 'editar-perfil', component:EditarPerfilComponent},
 
 
   
->>>>>>> otracosa
 ];
 
 @NgModule({
