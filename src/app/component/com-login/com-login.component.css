@@ -65,8 +65,7 @@
     }
     input{
         width: 100%;
-        padding-top: 2%;
-        padding-bottom: 2%;
+       padding: 3%;
         border-radius: 15px;
 
     }
@@ -114,5 +113,12 @@
     .color{
         color: rgb(31, 144, 182);
         font-family: roboto, sans-serif;
+    }
+
+    .invalid-feedback{
+
+        font-size: 16px;
+        margin-left: 40px;
+    
     }
 }
