@@ -26,11 +26,21 @@
       text-decoration: none;
       color: white;
     }
+    a:hover{
+
+      color: black;
+    }
     
     button{
       background-color: black;
       color:white;
       border:none
+    }
+    button:hover{
+
+      background-color: #6db3d1;
+      color: black;
+
     }
     
     ul{
@@ -91,6 +101,7 @@
     
     li:hover {
       filter: brightness(110%);
+      background-color: #6db3d1;
     }
     
     }
