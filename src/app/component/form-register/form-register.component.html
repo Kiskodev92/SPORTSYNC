@@ -15,24 +15,54 @@
                     <h1>Sport<span style="color: rgb(31, 144, 182);">Sync</span></h1>
                 </div>
     
-                <div class="formulario">
-                    <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre">
-                
-                    <label class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="usuario">
+                <div class="formulario"  [formGroup]="myForm">
+
+                     <div class="input1">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" formControlName="nombre"
+                            [ngClass]="{'is-invalid': (myForm.get('nombre').dirty || myForm.get('nombre').touched) && myForm.get('nombre').invalid}">
+                            <div *ngIf="!myForm.get('nombre').valid" class="invalid-feedback">El nombre obligatorio</div>
+                    </div>
+
+                    <div class="input2">  
+                            <label class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" formControlName="usuario"
+                            [ngClass]="{'is-invalid': (myForm.get('usuario').dirty || myForm.get('usuario').touched) && myForm.get('usuario').invalid}">
+                            <div *ngIf="!myForm.get('usuario').valid" class="invalid-feedback">El campo obligatorio</div>
+                    </div>
+
+                    <div class="input3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" formControlName="email"
+                            [ngClass]="{'is-invalid': myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)}">
+                            
+                            <div *ngIf="!myForm.get('email').valid" class="invalid-feedback">
+                                <div *ngIf="myForm.get('email').errors.required">*Campo es Obligatorio</div>
+                                <div *ngIf="myForm.get('email').errors.email">Email Incorrecto</div>
+                            </div> 
+                    </div>        
             
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email">
+                    <div class="input4">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" formControlName="password"
+                            [ngClass]="{'is-invalid': myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)}">
+                            
+                            <div *ngIf="!myForm.get('password').valid" class=invalid-feedback>
+                                <div *ngIf="myForm.get('password').errors.required">*Campo es Obligatorio</div>
+                                <div *ngIf="myForm.get('password').errors.minLength">Contraseña Incorrecta</div>
+                            </div>
+
+                    </div>
+
+                    <div class="input5">
+                            <label class="form-label">Provincia</label>
+                            <input type="text" class="form-control" id="provincia" formControlName="provincia"
+                            [ngClass]="{'is-invalid': (myForm.get('provincia').dirty || myForm.get('provincia').touched) && myForm.get('provincia').invalid}">
+                            <div *ngIf="!myForm.get('provincia').valid" class="invalid-feedback">El campo obligatorio</div>
+                    </div>
     
-                    <label class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password">
-            
-                    <label class="form-label">Provincia</label>
-                    <input type="text" class="form-control" id="provincia">
-    
-    
-                    <button type="submit" class="btn btn-dark">Siguiente</button>
+                    <button type="submit" class="btn btn-dark" (click)="registerUser()" [disabled]="myForm.invalid">Siguiente</button>
+
                 </div>
     
         </div>
