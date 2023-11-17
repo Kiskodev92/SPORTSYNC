@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Event } from 'src/app/models/event';
 import { EventosService } from 'src/app/shared/eventos.service';
 
@@ -9,17 +10,19 @@ import { EventosService } from 'src/app/shared/eventos.service';
 })
 export class EventPageComponent {
 
-  constructor( private eventService: EventosService){
 
+  constructor( private eventService: EventosService, private router : Router){
+   
   }
 
-  callevento( titulo: string, fecha: number, descripcion: string, foto: string,){
+  callevento(id_usuario:number ,deporte_id:number, titulo: string, fecha: number, descripcion: string, foto: string,){
     console.log("Estoy dentro de calleventos");
     
-    this.eventService.postEvent( new Event(titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
+    this.eventService.postEvent( new Event(0,id_usuario,titulo,fecha,descripcion,foto,id_usuario)).subscribe((data:any) =>{
       console.log(data);
+      
     })
-
+    // this.router.navigateByUrl("/")
   }
 
 }

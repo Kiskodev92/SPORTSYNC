@@ -18,8 +18,9 @@ export class EventosService {
   postEvent(event: Event){
     console.log("Se ejecuta el post");
     
-    return this.http.post(this.url3,event);
+    return this.http.post(this.url3,event)
   }
+  
   getEventos(){
     return this.http.get(this.url);
   }
