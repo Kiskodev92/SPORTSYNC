@@ -52,7 +52,7 @@
                   </div>
             </div>
 
-            <button type="submit" class="btn btn-dark" (click)="register()" >Registrar</button>
+            <button type="submit" class="btn btn-dark" (click)="register()" [disabled]="deporteForm.invalid" >Registrar</button>
 
     </div>
 </form>

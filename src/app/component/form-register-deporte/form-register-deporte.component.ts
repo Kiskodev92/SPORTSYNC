@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Deporte } from 'src/app/models/deporte';
 import { UserService } from 'src/app/shared/user.service';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-register-deporte',
@@ -20,34 +20,35 @@ export class FormRegisterDeporteComponent {
   ngOnInit() {
     
     this.deporteForm = this.formBuilder.group({
-      futbol: [false],  
+      futbol: [false],
       baloncesto: [false],
       volley: [false],
       patinaje: [false],
       natacion: [false],
       running: [false],
       ciclismo: [false],
-    });
+    }, { validators: [this.OneSelectedValidator] });
+  }
+  
+  private OneSelectedValidator(group: FormGroup) {
+    const values = Object.values(group.value);
+    return values.includes(true) ? null : { OneSelected: true };
   }
 
-    register() {
-      const selectedDeportes: string[] = [];
-    
-      Object.keys(this.deporteForm.getRawValue()).forEach(key => {
-        if (this.deporteForm.get(key).value) {
-          selectedDeportes.push(key);
-        }
+  register() {
+    if (this.deporteForm.valid) {
+      const selectedDeportes: string[] = Object.keys(this.deporteForm.value)
+        .filter(key => this.deporteForm.value[key]);
+  
+      const deporteData: Deporte = { deporte: selectedDeportes };
+  
+      this.userService.registerDeport(deporteData).subscribe(() => {
+        console.log('Deportes registrados correctamente');
+        this.router.navigateByUrl('/login');
       });
-    
-      if (selectedDeportes.length > 0) {
-        const deporte = new Deporte(selectedDeportes.join(', '));
-    
-        this.userService.registerDeport(deporte).subscribe(() => {
-          console.log("Deporte Registrado Correctamente");
-          this.router.navigate(['/login']);
-        });
-      } else {
-        console.log("Por favor, selecciona al menos un deporte.");
-      }
+    } else {
+      console.log('Error al guardar datos del deporte');
     }
+  }
+  
   }  
