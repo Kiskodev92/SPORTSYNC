@@ -49,7 +49,6 @@ export class ComLoginComponent {
       
         this.userService.logueado = true;
         this.userService.user = data[0];
-        this.router.navigate(['/home']);
 
       } else {
         console.log('Los datos de inicio de sesión no son correctos');
