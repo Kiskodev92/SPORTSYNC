@@ -15,10 +15,10 @@ export class EventPageComponent {
    
   }
 
-  callevento(id_usuario:number ,deporte_id:number, titulo: string, fecha: number, descripcion: string, foto: string,){
+  callevento(id_usuario:number, id_deporte:number, titulo: string, fecha: number, descripcion: string, foto: string,){
     console.log("Estoy dentro de calleventos");
     
-    this.eventService.postEvent( new Event(0,id_usuario,titulo,fecha,descripcion,foto,id_usuario)).subscribe((data:any) =>{
+    this.eventService.postEvent( new Event(id_usuario,id_deporte,titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
       console.log(data);
       
     })
