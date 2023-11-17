@@ -9,11 +9,13 @@ import { Deporte } from '../models/deporte';
 export class UserService {
 
   private url = "http://localhost:3000";
-  public logueado: boolean = false;
+  public logueado: boolean
   public user: User;
   public deporte: Deporte;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+     this.logueado = false;
+  }
   
     register(user:User){
 

@@ -32,7 +32,6 @@
         
         display: flex;
         flex-direction: column;
-        justify-content:space-around;
         align-items: center;
         border-radius: 15px ;
         background-color:  rgb(214, 243, 248) ;
@@ -44,8 +43,6 @@
     .fila{
         display: flex;
         flex-direction: column;
-        justify-content:space-around;
-        align-items: center;
         padding-bottom: 10%;
         width: 80%;
         font-family: roboto, sans-serif;
@@ -53,25 +50,21 @@
     .fila2{
         display: flex;
         flex-direction: column;
-        justify-content:space-around;
-        align-items: center;
         padding-bottom: 10%;
         width: 80%;
         font-family: roboto, sans-serif;
     }
-    
-    label{
-        margin-right: 75%;
-    }
     input{
         width: 100%;
-       padding: 3%;
+        height: 46px;
+        padding: 3%;
         border-radius: 15px;
 
     }
 
-    .contra{
-        margin-left: 10%;
+    .form-label{
+        margin-left: 5%;
+        font-size: 20px;
     }
    
     .btn{
@@ -119,6 +112,7 @@
 
         font-size: 16px;
         margin-left: 40px;
+        margin-top: 5px;
     
     }
 }

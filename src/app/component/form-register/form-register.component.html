@@ -36,7 +36,7 @@
                             <input type="email" class="form-control" id="email" formControlName="email"
                             [ngClass]="{'is-invalid': myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)}">
                             
-                            <div *ngIf="!myForm.get('email').valid" class=invalid-feedback>
+                            <div *ngIf="!myForm.get('email').valid" class="invalid-feedback">
                                 <div *ngIf="myForm.get('email').errors.required">*Campo es Obligatorio</div>
                                 <div *ngIf="myForm.get('email').errors.email">Email Incorrecto</div>
                             </div> 
