@@ -14,9 +14,8 @@ export class FormRegisterDeporteComponent {
   public deporte: Deporte;
   public deporteForm: FormGroup;
 
-  constructor(public userService: UserService, public router: Router,  private formBuilder: FormBuilder,) {
-  
-  }
+  constructor(public userService: UserService, public router: Router,  private formBuilder: FormBuilder,) {}
+
   ngOnInit() {
     
     this.deporteForm = this.formBuilder.group({
@@ -35,7 +34,7 @@ export class FormRegisterDeporteComponent {
     return values.includes(true) ? null : { OneSelected: true };
   }
 
-  register() {
+   register() {
     if (this.deporteForm.valid) {
       const selectedDeportes: string[] = Object.keys(this.deporteForm.value)
         .filter(key => this.deporteForm.value[key]);
@@ -50,5 +49,5 @@ export class FormRegisterDeporteComponent {
       console.log('Error al guardar datos del deporte');
     }
   }
-  
+
   }  
