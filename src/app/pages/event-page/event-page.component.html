@@ -12,7 +12,7 @@
         <input type="text" class="bigtext" placeholder="Descripción" #tercero>
         <input type="text" class="bigtext" placeholder="Insertar foto" #cuarto>
         <div class="buttons">
-        <button class="made" (click)="callevento(null,null, primero.value, segundo.valueAsNumber, tercero.value, cuarto.value,null)">Crear Evento</button>
+        <button class="made" type="button"  (click)="callevento(primero.value, segundo.valueAsNumber, tercero.value, cuarto.value)">Crear Evento</button>
         <button routerLink="">Cancelar</button>
         </div>
     </form>

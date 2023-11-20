@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Event } from '../models/event';
 import { Deporte } from '../models/deporte';
+import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class EventosService {
   private url3: string = 'http://localhost:3000/evento'
   private urlsport: string = 'http://localhost:3000/sport'
 
-  constructor( private http: HttpClient){
+  constructor( private http: HttpClient, private userService: UserService){
 
   }
   getSport(){

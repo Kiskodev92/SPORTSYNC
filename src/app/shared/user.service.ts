@@ -17,7 +17,7 @@ export class UserService {
      this.logueado = false;
   }
   
-    register(user:User){
+    register(user: User){
 
       return this.http.post(this.url + "/register", user);
     }
