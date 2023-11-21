@@ -13,6 +13,7 @@ export class EventosService {
   private url2: string = 'http://localhost:3000/explore'
   private url3: string = 'http://localhost:3000/evento'
   private urlsport: string = 'http://localhost:3000/sport'
+  private urlbtn: string = 'http://localhost:3000/btn'
 
   constructor( private http: HttpClient, private userService: UserService){
 
@@ -25,7 +26,11 @@ export class EventosService {
     
     return this.http.post(this.url3,event)
   }
-  
+  btnFollow(event: Event){
+    console.log("Se cambia el boton");
+
+    return this.http.post(this.urlsport, event)
+  }
   getEventos(){
     return this.http.get(this.url);
   }

@@ -31,11 +31,11 @@ export class EventPageComponent {
   
 
 
-  public callevento(titulo: string, fecha: number, descripcion: string, foto: string){
+  public callevento(id_usuario:number, id_deporte:number, titulo: string, fecha: number, descripcion: string, foto: string){
     
     
     
-    this.eventService.postEvent( new Event(titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
+    this.eventService.postEvent( new Event(id_usuario,id_deporte,titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
       console.log(data);
       
       
