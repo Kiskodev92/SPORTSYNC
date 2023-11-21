@@ -4,6 +4,16 @@
         margin: 0;
     }
 
+    .claseMostrar{
+        background-color: blue;
+        color: white;
+    }
+
+    .noMostrar{
+        background-color: grey;
+        color: wheat;
+    }
+
     main{
     
         height: 680px;
