@@ -7,10 +7,10 @@
         <div class="con" [formGroup]="form_login">
 
            <div class="fila">
-               <label class="form-label">Email</label>
-               <input type="text" class="form-control" id="email" formControlName="email"
-               [ngClass]="{'is-invalid': (form_login.get('email').dirty || form_login.get('email').touched) && form_login.get('email').invalid}">
-               <div *ngIf="!form_login.get('email').valid" class="invalid-feedback">El campo obligatorio</div>
+               <label class="form-label">Usuario</label>
+               <input type="text" class="form-control" id="usuario" formControlName="usuario"
+               [ngClass]="{'is-invalid': (form_login.get('usuario').dirty || form_login.get('usuario').touched) && form_login.get('usuario').invalid}">
+               <div *ngIf="!form_login.get('usuario').valid" class="invalid-feedback">El campo obligatorio</div>
            </div>
 
            <div class="fila2">
