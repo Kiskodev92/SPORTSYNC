@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Event } from 'src/app/models/event';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-card',
@@ -9,5 +10,7 @@ import { Event } from 'src/app/models/event';
 export class CardComponent {
 
   @Input() event: Event;
+
+  @Input() user: Event;
 
 }
