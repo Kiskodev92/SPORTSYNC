@@ -11,20 +11,20 @@
                 </div>    
         
                 <div class="form-check formul">
-                    <input type="text" class="form-control" id="nombre" placeholder="Nombre de Usuario">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre de Usuario" #nombre>
 
-                    <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
+                    <input type="text" class="form-control" id="ciudad" placeholder="Provincia" #provincia>
 
-                    <input type="text" class="form-control descripcion" id="descripcion" placeholder="Descripcion">
+                    <input type="text" class="form-control descripcion" id="descripcion" placeholder="Descripcion" #descripcion>
 
-                    <input type="text" class="form-control foto" id="cambiarFoto" placeholder="Cambiar Foto ">
+                    <input type="text" class="form-control foto" id="cambiarFoto" placeholder="Cambiar Foto" #foto>
                     
                 </div>
             
         </div>
 
         <div class="boton">
-                    <button type="submit" class="btn btn-dark">Aceptar</button>
-                    <button type="submit" class="btn gris" routerLink="perfil">Cancelar</button>
+                    <button type="submit" class="btn btn-dark" (click)="editar()">Aceptar</button>
+                    <button type="submit" class="btn gris" (click)="cancelarPerfil()">Cancelar</button>
         </div>          
 </main>

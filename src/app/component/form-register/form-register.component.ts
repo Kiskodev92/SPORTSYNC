@@ -43,7 +43,7 @@ export class FormRegisterComponent {
 registerUser() {
   if (this.myForm.valid) {
     const userData = this.myForm.value;
-    this.userService.register(userData).subscribe(response => {
+    this.userService.register(userData).subscribe(() => {
         console.log("Campos guardados correctamente");
         this.router.navigateByUrl('/register-deporte');
         
