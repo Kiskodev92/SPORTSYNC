@@ -24,7 +24,7 @@ export class ComLoginComponent {
 
     this.form_login = new FormGroup({
 
-      'usuario': new FormControl (null, [Validators.required]),
+      'email': new FormControl (null, [Validators.required, Validators.email]),
       'password': new FormControl (null, [Validators.required, Validators.minLength(minPassLength)])
     
     });
@@ -33,12 +33,12 @@ export class ComLoginComponent {
 
   iniciarSesion(){
 
-    let usuario = this.form_login.get('usuario').value;
+    let email = this.form_login.get('email').value;
     let password = this.form_login.get('password').value;
 
-    this.user = new User (null,'', usuario, '', password, '', '', '')
+    this.user = new User (null, '', '', email, password, '', '', '')
 
-    console.log(usuario);
+    console.log(email);
     console.log(password);
 
     this.userService.login(this.user).subscribe((data) => {
