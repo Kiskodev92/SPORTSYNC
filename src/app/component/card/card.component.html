@@ -5,7 +5,7 @@
     <div class="card-body">
     <h5 class="card-title">{{event.titulo}}</h5>
     <p class="card-text">{{event.fecha}}<br>{{event.descripcion}}</p>
-    <button class="btn btn-dark">Unirse</button>
+    <button class="btn btn-dark" (click)="btnfol()">{{ stafol ? 'Seguido' : 'Unirse' }}</button>
     </div>
   </div>
 </body>
