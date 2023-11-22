@@ -35,7 +35,11 @@ export class EventPageComponent {
     
     
     
+<<<<<<< HEAD
+    this.eventService.postEvent( new Event(id_usuario,id_deporte,titulo,fecha,descripcion,foto,this.userService.user.id_user)).subscribe((data: any) =>{
+=======
     this.eventService.postEvent( new Event(id_usuario,id_deporte,titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
+>>>>>>> d251def4f069aa718cb184537c639ee49a85f9a5
       console.log(data);
       
       

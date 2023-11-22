@@ -1,7 +1,7 @@
 <main>
 
     <div class="fotoBoton">
-         <section class="imagen"><img class="imgPerfil" src="./../../../assets/hasbulla.jpg"></section>
+         <section class="imagen"><img class="imgPerfil" src="{{user.foto}}"></section>
          <aside class="info">
                <div class="infoPerfil">
                         <div class="fotos-Subidas">
@@ -23,22 +23,32 @@
     </div>
 
     <div class="datos">
-        <h4 class="Nombre">Hasbulla</h4>
-        <h5 class="Sport">Teakwondo, Baloncesto y Ciclismo</h5>
-        <h5 class="description">Me encanta el baloncesto solia jugar de pequeño y vengo a enseñaros como se juega</h5>
+        <h4 class="Nombre">{{user.nombre}}</h4>
+        <h5 class="Sport">{{deporte.deporte}}</h5>
+        <h5 class="description">{{user.descripcion}}</h5>
     </div>
 
     <div class="eventSeguid">
-        <button (click)="mostrarEvent()" type="button" class="btn-event">Mis Eventos</button>
-        <button (click)="mostrarSeguido()" type="button" class="btn-event">Seguidos</button>
+        <button (click)="mostrarContenido1()" type="button" class="btn-event">Mis Eventos</button>
+        <button (click)="mostrarContenido2()" type="button" class="btn-event">Seguidos</button>
     </div>
 
-    <div *ngIf="mostrarBtnMisEventos">
-       
-        <p>Mis Eventos</p>
+    <div *ngIf="mostrarContenido === 1" >
+    
+        <div  *ngFor="let per of eventPerfil" class="card" style="width: 18rem;" >
+            <img src={{per.foto}} class="card-img-top">
+            <div class="card-body">
+            <h5 class="card-title">{{per.titulo}}</h5>
+            <p class="card-text">{{per.fecha}}<br>{{per.descripcion}}</p>
+           
+            </div>
+        </div>
+    
     </div>
    
-    <div *ngIf="mostrarMisSeguidos">
+
+   
+    <div *ngIf="mostrarContenido === 2" >
        
         <p>Eventos a los que sigo</p>
       </div>

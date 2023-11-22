@@ -9,6 +9,9 @@ import { Deporte } from '../models/deporte';
 export class UserService {
 
   private url = "http://localhost:3000";
+  private urlperfil = "http://localhost:3000/perfil";
+  private urlper = "http://localhost:3000/perfil2"
+
   public logueado: boolean
   public user: User;
   public deporte: Deporte;
@@ -35,6 +38,11 @@ export class UserService {
   
       return this.http.put(this.url + "/usuario", update_user);
   
+    }
+
+    getProyect(){
+      
+      return this.http.get(`${this.urlperfil}?id=${this.user.id_user}`)
     }
 
    };
