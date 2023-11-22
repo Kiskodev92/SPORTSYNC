@@ -48,12 +48,7 @@ export class UserService {
       return this.http.get(`${this.urlperfil}?id=${this.user.id_user}`)
     }
 
-    postProyect(us: UsEvent){
-
-      return this.http.post(`${this.urlper2}?id=${this.user.id_user}`,us)
-
-
-    }
+  
 
     getSeguidos(){
 
