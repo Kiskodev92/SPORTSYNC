@@ -11,7 +11,9 @@ export class UserService {
 
   private url = "http://localhost:3000";
   private urlperfil = "http://localhost:3000/perfil";
-  private urlper = "http://localhost:3000/perfil2"
+  private urlper = "http://localhost:3000/perfil4"
+  private urlper2 = "http://localhost:3000/perfil2"
+
 
   public logueado: boolean
   public user: User;
@@ -48,9 +50,14 @@ export class UserService {
 
     postProyect(us: UsEvent){
 
-      return this.http.post(`${this.urlper}?id=${this.user.id_user}`,us)
+      return this.http.post(`${this.urlper2}?id=${this.user.id_user}`,us)
 
 
+    }
+
+    getSeguidos(){
+
+      return this.http.get(`${this.urlper}?id=${this.user.id_user}`)
     }
 
    };
