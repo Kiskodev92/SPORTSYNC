@@ -1,7 +1,7 @@
 <main>
 
     <div class="fotoBoton">
-         <section class="imagen"><img class="imgPerfil" src="{{user.foto}}"></section>
+         <section class="imagen"><img class="imgPerfil" src={{user.foto}}></section>
          <aside class="info">
                <div class="infoPerfil">
                         <div class="fotos-Subidas">
@@ -24,13 +24,13 @@
 
     <div class="datos">
         <h4 class="Nombre">{{user.nombre}}</h4>
-        <h5 class="Sport">{{deporte.deporte}}</h5>
+        <h5 class="Sport">{{user.email}}</h5>
         <h5 class="description">{{user.descripcion}}</h5>
     </div>
 
     <div class="eventSeguid">
         <button (click)="mostrarContenido1()" type="button" class="btn-event">Mis Eventos</button>
-        <button (click)="mostrarContenido2()" type="button" class="btn-event">Seguidos</button>
+        <button (click)="mostrarContenido2();postProyect(1,1)" type="button" class="btn-event">Seguidos</button>
     </div>
 
     <div *ngIf="mostrarContenido === 1" >
@@ -49,17 +49,21 @@
 
    
     <div *ngIf="mostrarContenido === 2" >
+
+        <div *ngFor="let eve of Perfil" class="card" style="width: 18rem;">
+
+            <img src={{eve.foto}} class="card-img-top">
+            <div class="card-body">
+            <h5 class="card-title">{{eve.titulo}}</h5>
+            <p class="card-text">{{eve.fecha}}<br>{{eve.descripcion}}</p>
+
+        </div>
        
-        <p>Eventos a los que sigo</p>
-      </div>
-    
-    
-
-    <ng-template #lista>
-        <h1>NO HAY EVENTOS</h1>
-    </ng-template>
-    
+      
+    </div>
     
 
-</main>
+    
+
+
 <app-nav-bar></app-nav-bar>

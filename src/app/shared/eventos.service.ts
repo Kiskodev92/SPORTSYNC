@@ -4,6 +4,9 @@ import { Event } from '../models/event';
 import { Deporte } from '../models/deporte';
 import { UserService } from './user.service';
 
+
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,16 +18,20 @@ export class EventosService {
   private urlsport: string = 'http://localhost:3000/sport'
   private urlbtn: string = 'http://localhost:3000/btn'
 
+  public event: Event
+
+  public deporte: Deporte
+
   constructor( private http: HttpClient, private userService: UserService){
 
   }
   getSport(){
-    return this.http.get(this.urlsport);
+    return this.http.get(`${this.urlsport}`);
   }
   postEvent(event: Event){
     console.log("Se ejecuta el post");
     
-    return this.http.post(this.url3,event)
+    return this.http.post(`${this.url3,event.id_eventos}`,event.id_usuario)
   }
   btnFollow(event: Event){
     console.log("Se cambia el boton");

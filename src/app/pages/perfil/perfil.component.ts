@@ -3,6 +3,8 @@ import { EventosService } from 'src/app/shared/eventos.service';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/shared/user.service';
 import { Deporte } from 'src/app/models/deporte';
+import { UsEvent } from 'src/app/models/us-event';
+import { Event } from 'src/app/models/event';
 
 @Component({
   selector: 'app-perfil',
@@ -17,16 +19,21 @@ export class PerfilComponent {
 
   mostrarContenido: number = 1
 
-  public user: User
+  public user: User;
 
-  public deporte: Deporte
+  public deporte: Deporte[];
 
-  constructor(private eventService: EventosService, private userService: UserService){
+  public event : Event
+
+  public perfil: Event[] = []
+
+
+  constructor(public eventService: EventosService, private userService: UserService){
     
+    this.user = this.userService.user
 
-    this.user  = new User(0,"Carol","", "", "","","desde pequeña me gusta el deporte y lo que mas practico es la escalada","https://images.pexels.com/photos/2272853/pexels-photo-2272853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+    this.event = this.eventService.event
 
-    this.deporte = new Deporte('escalada , natacion')
 
     this.userService.getProyect().subscribe((data:any) =>{
       console.log(data);
@@ -46,6 +53,17 @@ export class PerfilComponent {
   mostrarContenido2(){
 
     this.mostrarContenido = 2
+  }
+
+  postProyect(id_usuario:number, id_evento:number){
+
+    console.log('entro');
+    
+
+    this.userService.postProyect(new UsEvent(0,id_usuario,id_evento)).subscribe((data:any) =>{
+      console.log(data);
+      this.perfil = data
+    })
   }
   
 }

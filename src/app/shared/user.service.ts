@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
 import { Deporte } from '../models/deporte';
+import { UsEvent } from '../models/us-event';
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +44,13 @@ export class UserService {
     getProyect(){
       
       return this.http.get(`${this.urlperfil}?id=${this.user.id_user}`)
+    }
+
+    postProyect(us: UsEvent){
+
+      return this.http.post(`${this.urlper}?id=${this.user.id_user}`,us)
+
+
     }
 
    };

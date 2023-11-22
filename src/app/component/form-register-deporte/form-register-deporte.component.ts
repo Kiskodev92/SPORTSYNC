@@ -41,7 +41,7 @@ export class FormRegisterDeporteComponent {
     if (this.deporteForm.valid) {
       const selectedDeportes: string[] = Object.keys(this.deporteForm.value).filter(key => this.deporteForm.value[key]).map(key => key);
 
-      const deporte = new Deporte(selectedDeportes.join(', '));
+      const deporte = new Deporte(selectedDeportes.join(', '),0);
       this.userService.registerDeport(deporte).subscribe(() => {
         console.log('Deportes registrados correctamente');
         this.router.navigateByUrl('/login');

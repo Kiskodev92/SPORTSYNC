@@ -2,7 +2,7 @@
     <form action="">
         <input list="dataList" class="titlevent" placeholder="↓  Elige deporte"  >
         <datalist id="dataList" >
-            <option *ngFor="let list of dataList" >{{list.deporte}}</option>
+            <option *ngFor="let list of dataList" [attr.data-id-deporte]="list.id_deporte" >{{list.deporte}}</option>
            
         </datalist>
         <input type="text" class="titlevent" placeholder="Nombre del evento" #primero>
