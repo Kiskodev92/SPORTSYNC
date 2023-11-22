@@ -31,7 +31,7 @@ export class EventosService {
   postEvent(event: Event){
     console.log("Se ejecuta el post");
     
-    return this.http.post(`${this.url3,event.id_eventos}`,event.id_usuario)
+    return this.http.post(`${this.url3}`,event.id_usuario)
   }
   btnFollow(event: Event){
     console.log("Se cambia el boton");
