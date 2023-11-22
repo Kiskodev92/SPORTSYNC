@@ -36,7 +36,7 @@ export class ComLoginComponent {
     let usuario = this.form_login.get('usuario').value;
     let password = this.form_login.get('password').value;
 
-    this.user = new User (null,'', usuario, '', password, '', '', '','')
+    this.user = new User (null,'', usuario, '', password, '', '', '')
 
     console.log(usuario);
     console.log(password);

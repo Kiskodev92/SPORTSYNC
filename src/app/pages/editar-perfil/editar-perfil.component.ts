@@ -13,7 +13,7 @@ export class EditarPerfilComponent {
   public update_user: User 
 
   constructor(private userService: UserService, public router: Router) {
-    this.update_user = this.userService.user || new User(null, '', null, null, null, '', '', '');
+    this.update_user = this.userService.user || new User(0, '', null, null, null, '', '', '');
   }
   
 
