@@ -36,7 +36,7 @@ export class EventosService {
   btnFollow(event: Event){
     console.log("Se cambia el boton");
 
-    return this.http.post(this.urlsport, event)
+    return this.http.post(this.urlbtn, event)
   }
   getEventos(){
     return this.http.get(this.url);

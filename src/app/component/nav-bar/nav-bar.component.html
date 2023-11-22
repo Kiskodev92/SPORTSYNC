@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <footer>
+    <footer *ngIf="this.userService.logueado">
         <div class="tamaño">
             <a routerLink=""> <img src="./../../../assets/logocasa.jpg" ></a>
         </div>
