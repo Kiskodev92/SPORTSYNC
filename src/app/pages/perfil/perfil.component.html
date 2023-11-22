@@ -30,7 +30,7 @@
 
     <div class="eventSeguid">
         <button (click)="mostrarContenido1()" type="button" class="btn-event">Mis Eventos</button>
-        <button (click)="mostrarContenido2();postProyect(1,1)" type="button" class="btn-event">Seguidos</button>
+        <button (click)="mostrarContenido2()" type="button" class="btn-event">Seguidos</button>
     </div>
 
     <div *ngIf="mostrarContenido === 1" >
@@ -48,9 +48,9 @@
    
 
    
-    <div *ngIf="mostrarContenido === 2" >
+    <div *ngIf="mostrarContenido === 2"  >
 
-        <div *ngFor="let eve of Perfil" class="card" style="width: 18rem;">
+        <div *ngFor="let eve of perfil" class="card" style="width: 18rem;">
 
             <img src={{eve.foto}} class="card-img-top">
             <div class="card-body">

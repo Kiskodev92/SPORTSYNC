@@ -34,13 +34,17 @@ export class PerfilComponent {
 
     this.event = this.eventService.event
 
+    console.log(this.user);
+    
+
 
     this.userService.getProyect().subscribe((data:any) =>{
       console.log(data);
       
       this.eventPerfil = data
-      
     })
+
+   
 
   }
  
@@ -53,17 +57,24 @@ export class PerfilComponent {
   mostrarContenido2(){
 
     this.mostrarContenido = 2
-  }
-
-  postProyect(id_usuario:number, id_evento:number){
-
-    console.log('entro');
-    
-
-    this.userService.postProyect(new UsEvent(0,id_usuario,id_evento)).subscribe((data:any) =>{
+       
+    this.userService.getSeguidos().subscribe((data: any) =>{
       console.log(data);
       this.perfil = data
     })
+      
   }
+
+  // postProyect(id_usuario:number, id_evento:number){
+
+  //   console.log('entro');
+
+    
+
+  //   this.userService.postProyect(new UsEvent(0,id_usuario,id_evento)).subscribe((data:any) =>{
+  //     console.log(data);
+  //     this.perfil = data
+  //   })
+  // }
   
 }
