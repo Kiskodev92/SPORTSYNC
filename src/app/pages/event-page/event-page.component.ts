@@ -26,10 +26,7 @@ export class EventPageComponent {
     })
   }
 
-
   
-  
-
 
   public callevento(id_usuario:number, id_deporte:number, titulo: string, fecha: number, descripcion: string, foto: string){
     
