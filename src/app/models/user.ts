@@ -10,8 +10,6 @@ export class User {
     public descripcion: string,
     public foto: string
     ){}
-
-
     
 }
 
