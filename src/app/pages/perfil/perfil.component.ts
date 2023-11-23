@@ -65,16 +65,4 @@ export class PerfilComponent {
       
   }
 
-  // postProyect(id_usuario:number, id_evento:number){
-
-  //   console.log('entro');
-
-    
-
-  //   this.userService.postProyect(new UsEvent(0,id_usuario,id_evento)).subscribe((data:any) =>{
-  //     console.log(data);
-  //     this.perfil = data
-  //   })
-  // }
-  
 }
