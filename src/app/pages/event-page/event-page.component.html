@@ -1,7 +1,7 @@
 <body>
     <form action="">
-        <input list="dataList" class="titlevent" placeholder="            ↓  Elige deporte abajo ↓ ">
-        <select id="dataList" (change)="selectSport($event.target.value)">
+        <input list="dataList" class="selecctor" placeholder="                  ↓  Elige deporte abajo ↓ ">
+        <select id="dataList" placeholder="Elige deporte" (change)="selectSport($event.target.value)">
             <option *ngFor="let list of dataList" [value]="list.deporte">{{list.deporte}}</option >
            
         </select>

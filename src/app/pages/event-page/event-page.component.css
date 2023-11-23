@@ -42,6 +42,12 @@
         height: 8rem;
         text-align: center;
     }
+    .selecctor{
+        height: 3rem;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+    }
     button{
         height: 2.4rem;
         border: none;
