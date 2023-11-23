@@ -1,3 +1,4 @@
+<app-header></app-header>
 <main>
             
             <div class="titulo">
@@ -15,9 +16,9 @@
 
                     <input type="text" class="form-control" id="ciudad" placeholder="Provincia" #provincia>
 
-                    <input type="text" class="form-control descripcion" id="descripcion" placeholder="Descripcion" #descripcion>
+                    <textarea type="text" class="form-control descripcion" id="descripcion" placeholder="Descripcion" #descripcion></textarea>
 
-                    <input type="text" class="form-control foto" id="cambiarFoto" placeholder="Cambiar Foto" #foto>
+                    <textarea type="text" class="form-control foto" id="cambiarFoto" placeholder="Cambiar Foto" #foto></textarea>
                     
                 </div>
             
@@ -28,3 +29,4 @@
                     <button type="submit" class="btn gris" (click)="cancelarPerfil()">Cancelar</button>
         </div>          
 </main>
+<app-nav-bar></app-nav-bar>

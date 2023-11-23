@@ -12,8 +12,8 @@ export class EditarPerfilComponent {
 
   public update_user: User 
 
-  constructor(private userService: UserService, public router: Router) {
-    this.update_user = this.userService.user || new User(0, '', null, null, null, '', '', '');
+  constructor(public userService: UserService, public router: Router) {
+    this.update_user = this.userService.user;
   }
   
 
