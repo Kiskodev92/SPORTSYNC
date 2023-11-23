@@ -1,16 +1,16 @@
 <body>
     <form action="">
-        <input list="dataList" class="titlevent" placeholder="↓  Elige deporte"  >
-        <datalist id="dataList" >
-            <option *ngFor="let list of dataList" >{{list.deporte}}</option>
+        <input list="dataList" class="titlevent" placeholder="↓  Elige deporte">
+        <select id="dataList" (change)="selectSport($event.target.value)">
+            <option *ngFor="let list of dataList" [value]="list.deporte">{{list.deporte}}</option >
            
-        </datalist>
+        </select>
         <input type="text" class="titlevent" placeholder="Nombre del evento" #primero>
             <input type="date" class="timer" placeholder="Fecha"#segundo>
         <input type="text" class="bigtext" placeholder="Descripción" #tercero>
         <input type="text" class="bigtext" placeholder="Insertar foto" #cuarto>
         <div class="buttons">
-        <button class="made" type="button"  (click)="callevento(0,0,primero.value, segundo.valueAsNumber, tercero.value, cuarto.value)">Crear Evento</button>
+        <button class="made" type="button"  (click)="callevento(primero.value, segundo.valueAsNumber, tercero.value, cuarto.value)">Crear Evento</button>
         <button routerLink="">Cancelar</button>
         </div>
     </form>

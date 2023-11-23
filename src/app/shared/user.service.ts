@@ -37,6 +37,7 @@ export class UserService {
   
       return this.http.post(this.url + "/login", user);
     }
+    
     editPerfil(update_user:User){
   
       return this.http.put(this.url + "/usuario", update_user);

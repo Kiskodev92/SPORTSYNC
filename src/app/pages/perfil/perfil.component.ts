@@ -21,7 +21,7 @@ export class PerfilComponent {
 
   public user: User;
 
-  public deporte: Deporte[];
+  public deporte: Deporte[] = []
 
   public event : Event
 
@@ -36,6 +36,10 @@ export class PerfilComponent {
 
     console.log(this.user);
     
+    this.eventService.getSportUs().subscribe((data:any) =>{
+      console.log(data);
+      this.deporte = data
+    })
 
 
     this.userService.getProyect().subscribe((data:any) =>{
