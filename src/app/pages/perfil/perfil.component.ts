@@ -28,6 +28,8 @@ export class PerfilComponent {
 
   public perfil: Event[] = []
 
+  public spoortUs
+
 
   constructor(public eventService: EventosService, private userService: UserService, public router: Router){
     
@@ -40,6 +42,9 @@ export class PerfilComponent {
     this.eventService.getSportUs().subscribe((data:any) =>{
       console.log(data);
       this.deporte = data
+      for(let dep of this.deporte){
+        this.spoortUs= [dep.deporte]
+      }
     })
 
 
