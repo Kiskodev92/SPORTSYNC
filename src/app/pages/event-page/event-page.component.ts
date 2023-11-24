@@ -17,27 +17,45 @@ export class EventPageComponent {
   
   public dataList: Deporte[] = [];
 
+  public id_deporte: {} = {}
+
+  public deporteSelect: number;
+
   constructor( private eventService: EventosService, private router : Router, public userService : UserService){
      
     this.eventService.getSport().subscribe((data:any)=>{
       console.log(data);
       this.dataList = data.data
+      this.dataList.forEach((data)=>{
+        this.id_deporte[data.deporte] = data.id_deporte
+      })
+      console.log(this.id_deporte);
       
     })
   }
 
   
 
-  public callevento(id_usuario:number, id_deporte:number, titulo: string, fecha: number, descripcion: string, foto: string){
+  public callevento(  titulo: string, fecha: number, descripcion: string, foto: string){
+    
+   
+    console.log(this.userService.user.id_user);
     
     
     
-    this.eventService.postEvent( new Event(this.userService.user.id_user,id_deporte,titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
+    this.eventService.postEvent( new Event(this.deporteSelect,this.userService.user.id_user,titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
       console.log(data);
       
       
     })
      this.router.navigateByUrl("/")
-  }
+   }
+
+   selectSport(nombre:string){
+    console.log(nombre);
+
+    this.deporteSelect = this.id_deporte[nombre]
+    
+   }
 
 }

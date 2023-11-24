@@ -19,6 +19,8 @@ export class EventosService {
   private url3: string = 'http://localhost:3000/evento'
   private urlsport: string = 'http://localhost:3000/sport'
   private urlbtn: string = 'http://localhost:3000/btn'
+  private urlsportus: string = 'http://localhost:3000/sportus'
+
 
   public event: Event
 
@@ -36,7 +38,7 @@ export class EventosService {
   postEvent(event: Event){
     console.log("Se ejecuta el post");
     
-    return this.http.post(`${this.url3}`,event.id_usuario)
+    return this.http.post(`${this.url3}`,event)
   }
 
   getEventos(){
@@ -50,6 +52,11 @@ export class EventosService {
   btnFollow(UsEvent: UsEvent){
     console.log("Se cambia el boton");
 
-    return this.http.post(`${this.urlbtn,this.userService.user.id_user}`, UsEvent)
+    return this.http.post(`${this.urlbtn}`, UsEvent)
+  }
+
+  getSportUs(){
+
+    return this,this.http.get(`${this.urlsportus}?id=${this.userService.user.id_user}`)
   }
 }
