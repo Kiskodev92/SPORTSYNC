@@ -49,8 +49,6 @@ export class UserService {
       return this.http.get(`${this.urlperfil}?id=${this.user.id_user}`)
     }
 
-  
-
     getSeguidos(){
 
       return this.http.get(`${this.urlper}?id=${this.user.id_user}`)
