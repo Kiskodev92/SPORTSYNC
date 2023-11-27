@@ -5,6 +5,7 @@ import { UserService } from 'src/app/shared/user.service';
 import { Deporte } from 'src/app/models/deporte';
 import { UsEvent } from 'src/app/models/us-event';
 import { Event } from 'src/app/models/event';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -27,8 +28,10 @@ export class PerfilComponent {
 
   public perfil: Event[] = []
 
+  public spoortUs
 
-  constructor(public eventService: EventosService, private userService: UserService){
+
+  constructor(public eventService: EventosService, private userService: UserService, public router: Router){
     
     this.user = this.userService.user
 
@@ -39,6 +42,9 @@ export class PerfilComponent {
     this.eventService.getSportUs().subscribe((data:any) =>{
       console.log(data);
       this.deporte = data
+      for(let dep of this.deporte){
+        this.spoortUs= [dep.deporte]
+      }
     })
 
 
@@ -69,6 +75,8 @@ export class PerfilComponent {
       
   }
 
-  
+  botonEditar(){
+    this.router.navigate(['/editar-perfil']);
+  }
   
 }

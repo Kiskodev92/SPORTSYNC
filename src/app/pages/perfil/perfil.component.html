@@ -18,13 +18,17 @@
                         </div>
 
                </div>
-               <a routerLink="editar-perfil"><p type="button" class="btn btn-dark">Editar Perfil</p></a>
+               <a (click)="botonEditar()"><p type="button" class="btn btn-dark">Editar Perfil</p></a>
          </aside>
     </div>
 
     <div class="datos">
         <h4 class="Nombre">{{user.nombre}}</h4>
+<<<<<<< HEAD
         <h5 class="Sport" ></h5>
+=======
+        <h5 class="Sport">{{this.spoortUs}}</h5>
+>>>>>>> 12799cce9e1a9f6ea6854792edfbb6222ae7b9b1
         <h5 class="description">{{user.descripcion}}</h5>
     </div>
 
@@ -62,8 +66,5 @@
       
     </div>
     
-
-    
-
 
 <app-nav-bar></app-nav-bar>

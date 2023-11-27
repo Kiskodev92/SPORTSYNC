@@ -21,6 +21,13 @@
         color: gray;
         padding-right: 5%;
     }
+    select{
+        height: 5rem;
+        border: none;
+        margin: 10px;
+        border-radius: 15px;
+        background-color: rgb(244, 241, 241);
+    }
     input{
         height: 5rem;
         border: none;
@@ -34,6 +41,12 @@
     .bigtext{
         height: 8rem;
         text-align: center;
+    }
+    .selecctor{
+        height: 3rem;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
     }
     button{
         height: 2.4rem;
