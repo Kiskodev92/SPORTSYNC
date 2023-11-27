@@ -18,15 +18,24 @@ export class ExploreComponent {
     })
   }
 
-  buscar(titulo):void{
+  buscar(titulo,provincia):void{
     
-    if(titulo != 0){
-      console.log('evento uno');
+    if(titulo){
+      console.log('entro a titulo');
       
       this.eventService.getOne(titulo).subscribe((data:any) =>{
         console.log(data);
         this.home = data.data
       })
+    }if(provincia){
+      console.log('entro a provi');
+      
+
+      this.eventService.getOne(provincia).subscribe((data:any) =>{
+        console.log(data);
+        this.home = data.data
+
+    })
     }else{
       console.log('evento todos');
 

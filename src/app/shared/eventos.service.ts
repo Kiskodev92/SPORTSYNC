@@ -42,11 +42,20 @@ export class EventosService {
   }
 
   getEventos(){
-    return this.http.get(this.url);
+    return this.http.get(`${this.url}?provincia=${this.userService.user.provincia}`);
   }
 
-  getOne(titulo:string){
-    return this.http.get(`${this.url2}?titulo=${titulo}`)
+  getOne(titulo?:string,provincia?:string){
+
+    if(titulo){
+      console.log('entro en el servicio titulo');
+      
+      return this.http.get(`${this.url2}?titulo=${titulo}`)
+    }if(provincia){
+      console.log('entro en el servicio provincia');
+
+      return this.http.get(`${this.url2}?provincia=${provincia}`)
+    }
   }
 
   btnFollow(UsEvent: UsEvent){

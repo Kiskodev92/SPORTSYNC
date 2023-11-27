@@ -7,6 +7,7 @@ export class Event {
         public fecha: number,
         public descripcion: string,
         public foto: string,
+        public provincia: string,
         public id_eventos?: number,
     ){}
 }

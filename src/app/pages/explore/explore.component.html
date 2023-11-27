@@ -2,7 +2,7 @@
 <div class="container">
   <form action="" class="search">
     <input type="text" placeholder="Explora eventos...." #event>
-    <button type="button" (click)="buscar(event.value)"><img src="./../../../assets/Lupa2.jpg"></button>
+    <button type="button" (click)="buscar(event.value,0)"><img src="./../../../assets/Lupa2.jpg"></button>
   </form>
 </div>
 <div *ngIf="home.length != 0; else lista">
