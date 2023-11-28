@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="input2">  
-                            <label class="form-label">Usuario</label>
+                            <label class="form-label">Nombre de Usuario</label>
                             <input type="text" class="form-control" id="usuario" formControlName="usuario"
                             [ngClass]="{'is-invalid': (myForm.get('usuario').dirty || myForm.get('usuario').touched) && myForm.get('usuario').invalid}">
                             <div *ngIf="!myForm.get('usuario').valid" class="invalid-feedback">El campo obligatorio</div>
