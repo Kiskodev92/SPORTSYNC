@@ -2,7 +2,7 @@
 
     main{
     
-        height: 740px;
+        height: 730px;
         width: 100%;
         font-family: sans-serif;
     
@@ -91,7 +91,7 @@
     }
     .boton{
     
-        width: 250px;
+        width: 290px;
         height: 100px;
 
         display: flex;
@@ -103,9 +103,9 @@
     }
     button{
 
-        width: 250px;
+        width: 290px;
         height: 40px;
-        border-radius: 10px;
+        border-radius: 15px;
         border: none;
         
     }
