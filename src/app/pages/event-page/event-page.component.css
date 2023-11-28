@@ -35,11 +35,23 @@
         border-radius: 15px;
         background-color: rgb(244, 241, 241);
     }
+    textarea{
+        height: 5rem;
+        border: none;
+        margin: 10px;
+        border-radius: 15px;
+        background-color: rgb(244, 241, 241);
+        
+    }
     .titlevent{
         padding-left: 5%;
     }
     .bigtext{
         height: 8rem;
+        padding: 20px;
+    }
+    ::placeholder{
+
         text-align: center;
     }
     .selecctor{

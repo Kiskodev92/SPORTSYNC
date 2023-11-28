@@ -7,8 +7,8 @@
         </select>
         <input type="text" class="titlevent" placeholder="Nombre del evento" #primero>
             <input type="date" class="timer" placeholder="Fecha"#segundo>
-        <input type="text" class="bigtext" placeholder="Descripción" #tercero>
-        <input type="text" class="bigtext" placeholder="Insertar foto" #cuarto>
+        <textarea type="text" class="bigtext" placeholder="Descripción" #tercero></textarea>
+        <textarea type="text" class="bigtext" placeholder="Insertar foto" #cuarto></textarea>
         <div class="buttons">
         <button class="made" type="button"  (click)="callevento(primero.value, segundo.valueAsNumber, tercero.value, cuarto.value)">Crear Evento</button>
         <button routerLink="">Cancelar</button>
