@@ -8,11 +8,7 @@
 <body>
   <nav *ngIf="this.userService.logueado">
     <h1>SportSync</h1>
-    <input type="checkbox" id="menu">
-    <label for="menu"> ☰ </label>
-    <ul>
-      <li><button (click)="cerrarSesion()">Cerrar Sesion</button></li>
-    </ul>
+    <button (click)="cerrarSesion()"><img src="./../../../assets/logout.png" ></button>
   </nav>
 </body>
 </html>

@@ -21,6 +21,8 @@ import { ExploreComponent } from './pages/explore/explore.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AjustesComponent } from './pages/ajustes/ajustes.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { MayusPipe } from './pipes/mayus.pipe';
+import { DatePipe } from './pipes/date.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.compo
     EditarPerfilComponent,
     FormRegisterComponent,
     FormRegisterDeporteComponent,
+    MayusPipe,
+    DatePipe,
    
   ],
 

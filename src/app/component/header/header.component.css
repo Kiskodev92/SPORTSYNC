@@ -22,32 +22,35 @@
       text-shadow: 4px 4px 3px rgb(111, 111, 111);
     }
     
-    a{
+    /* a{
       text-decoration: none;
       color: white;
     }
     a:hover{
 
       color: black;
-    }
+    } */
     
     button{
-      background-color: black;
-      color:white;
-      border:none
+      background-color: #6db3d1;
+      border:none;
     }
     button:hover{
 
-      background-color: #6db3d1;
-      color: black;
+      background-color: aliceblue;
 
     }
-    
-    ul{
-      display: none;
+    img{
+      width: 25px;
+      background-color: #6db3d1;
+      text-align: center;
     }
     
-    input:checked  ~ ul{
+    /* ul{
+      display: none;
+    } */
+    
+    /* input:checked  ~ ul{
       display:block;
     }
     
@@ -65,10 +68,10 @@
       font-weight: bold;
       text-align: center;
       user-select: none;
-    }
+    } */
     
     
-    label:hover{
+    /* label:hover{
       background:black;
       color:white;
     }
@@ -78,9 +81,9 @@
       background: black; 
       color:white;
     
-    }
+    } */
     
-    ul{
+    /* ul{
       margin-top:0;
       padding: 0;
       width: 200px;
@@ -102,7 +105,7 @@
     li:hover {
       filter: brightness(110%);
       background-color: #6db3d1;
-    }
+    } */
     
     }
     

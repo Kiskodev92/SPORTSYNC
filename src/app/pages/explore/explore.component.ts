@@ -10,6 +10,7 @@ export class ExploreComponent {
 
   public home: Event[] = []
 
+
   constructor(private eventService: EventosService){
 
     this.eventService.getEventos().subscribe((data:any) =>{
@@ -18,23 +19,49 @@ export class ExploreComponent {
     })
   }
 
-  buscar(titulo):void{
+  buscar(provincia):void{
     
-    if(titulo != 0){
-      console.log('evento uno');
+    if(provincia != 0)
+    {
+      console.log(provincia);
       
-      this.eventService.getOne(titulo).subscribe((data:any) =>{
+      console.log('entro a PROVINCIA desde el componente');
+
+      this.eventService.getOne(provincia).subscribe((data:any)=>{
         console.log(data);
         this.home = data.data
       })
     }else{
-      console.log('evento todos');
 
+      console.log('entran todos los eventos de todas la provincias');
+      
       this.eventService.getEventos().subscribe((data:any) =>{
         console.log(data);
         this.home = data.data
       })
     }
 
+  }
+
+  buscar2(titulo){
+    
+    if(titulo != 0)
+    {
+   
+      console.log('entro a TITULO desde el componente');
+
+      this.eventService.getone2(titulo).subscribe((data:any)=>{
+        console.log(data);
+        this.home = data.data
+      })
+    }else{
+
+      console.log('entran todos los eventos de todas la provincias');
+      
+      this.eventService.getEventos().subscribe((data:any) =>{
+        console.log(data);
+        this.home = data.data
+      })
+    }
   }
 }
