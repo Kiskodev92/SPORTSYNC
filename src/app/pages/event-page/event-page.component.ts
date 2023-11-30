@@ -43,7 +43,7 @@ export class EventPageComponent {
     
     
     
-    this.eventService.postEvent( new Event(this.deporteSelect,this.userService.user.id_user,titulo,fecha,descripcion,foto)).subscribe((data: any) =>{
+    this.eventService.postEvent( new Event(this.deporteSelect,this.userService.user.id_user,titulo,fecha,descripcion,foto,"")).subscribe((data: any) =>{
       console.log(data);
       
       

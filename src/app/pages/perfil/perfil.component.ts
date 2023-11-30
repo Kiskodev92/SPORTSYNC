@@ -13,10 +13,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
+  [x: string]: any;
 
   
     
   public eventPerfil: Event[] = []
+
+  public usevent: UsEvent[] = []
 
   mostrarContenido: number = 1
 
@@ -75,8 +78,17 @@ export class PerfilComponent {
       
   }
 
-  botonEditar(){
+  botonEditar():void{
     this.router.navigate(['/editar-perfil']);
   }
+
+  borrar(id_usuario:number,id_evento:number){
+
+    this.eventService.dejarDeSeguir(id_usuario,id_evento).subscribe((data:any)=>{
+     console.log(data);
+      
+    })
+  }
+ 
   
 }

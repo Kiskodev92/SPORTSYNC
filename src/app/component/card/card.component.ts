@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Event } from 'src/app/models/event';
 import { User } from 'src/app/models/user';
 import { Router } from '@angular/router';
@@ -16,6 +16,11 @@ export class CardComponent {
   @Input() event: Event;
 
   @Input() user: Event;
+
+  @Input() usEvent: UsEvent
+
+ 
+
   stafol: boolean = false;
 
   constructor(private usevent: EventosService, private userService: UserService){}
