@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     border-radius: 15px;
-    padding: 10px 20px;
+   
 }
 input{
     background: transparent;
@@ -36,5 +36,11 @@ button{
 img{    
     width: 100%;
     border-radius: 50%;
+}
+.input{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 }

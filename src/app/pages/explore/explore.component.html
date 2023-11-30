@@ -1,8 +1,12 @@
 <body>
 <div class="container">
   <form action="" class="search">
-    <input type="text" placeholder="Explora eventos...." #event>
-    <button type="button" (click)="buscar(event.value,0)"><img src="./../../../assets/Lupa2.jpg"></button>
+    <div class="input">
+      <input type="text" placeholder="Pon tu provincia" #provin>
+      <button type="button" (click)="buscar(provin.value)"><img src="./../../../assets/Lupa2.jpg"></button>
+      <input type="text" placeholder="Busca tu evento" #event>
+      <button type="button" (click)="buscar2(event.value)"><img src="./../../../assets/Lupa2.jpg"></button>
+    </div>
   </form>
 </div>
 <div *ngIf="home.length != 0; else lista">
