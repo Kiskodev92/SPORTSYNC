@@ -30,6 +30,7 @@
     h1{
         font-family: roboto, sans-serif;
         text-shadow: 4px 4px 3px rgb(228, 225, 225);
+        font-weight: bold;
     }
     
     .con{
@@ -81,17 +82,16 @@
         width: 100%;
         padding-top: 4%;
         padding-bottom: 4%;
-        border-radius: 10px;
+        border-radius: 15px;
         background-color: black;
         color: white;
-        font-size: 20px
-    };
+        font-size: 20px;
+    }
     
    
     .dos{
         padding-top: 20%;
         font-family: roboto, sans-serif;
-
     }
     p{
         font-family: roboto, sans-serif;

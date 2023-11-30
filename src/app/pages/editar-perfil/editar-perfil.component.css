@@ -74,6 +74,15 @@
         background-color: rgb(244, 241, 241);
     
     }
+    select{
+
+        width: 290px;
+        height: 45px;
+        margin-right: 22px;
+        border-radius: 15px;
+        background-color: rgb(244, 241, 241);
+        color: rgb(101, 101, 101);
+    }
     textarea{
         width: 290px;
         margin-right: 22px;
