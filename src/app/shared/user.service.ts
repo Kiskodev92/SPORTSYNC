@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
 import { Deporte } from '../models/deporte';
 import { UsEvent } from '../models/us-event';
+import { Usdep } from '../models/us-dep';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,8 @@ export class UserService {
   public logueado: boolean
   public user: User;
   public deporte: Deporte;
+  public usdep: Usdep
+  public idRegistro: number;
 
   constructor(private http: HttpClient) {
      this.logueado = false;
@@ -38,6 +41,12 @@ export class UserService {
       return this.http.post(this.url + "/login", user);
     }
     
+    postUsdep(usdep: Usdep){
+
+      return this.http.post(this.url + "/registerUsdep", usdep)
+    }
+  
+
     editPerfil(update_user:User){
   
       return this.http.put(this.url + "/usuario", update_user);
