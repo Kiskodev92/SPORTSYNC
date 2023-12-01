@@ -87,16 +87,7 @@ export class PerfilComponent {
     console.log(id_evento);
     
 
-<<<<<<< HEAD
-
-    console.log(this.userService.user.id_user);
-    console.log(this.us.id_evento);
-    
-    
-    this.eventService.dejarDeSeguir(id_usuario,id_evento).subscribe((data:any)=>{
-=======
     this.eventService.dejarDeSeguir(id_evento).subscribe((data:any)=>{
->>>>>>> 0df17bc2e27d48484ed713826fd72280b3769ffc
      console.log(data);
       this.perfil = this.perfil.filter( val =>{ return val.id_eventos != id_evento })
     })
