@@ -16,10 +16,11 @@ export class PerfilComponent {
   [x: string]: any;
 
   
-    
-  public eventPerfil: Event[] = []
+  public us: UsEvent;
 
-  public usevent: UsEvent[] = []
+  public eventPerfil: Event[] = [];
+
+  public usevent: UsEvent[] = [];
 
   mostrarContenido: number = 1
 
@@ -84,6 +85,11 @@ export class PerfilComponent {
 
   borrar(id_usuario:number,id_evento:number){
 
+
+    console.log(this.userService.user.id_user);
+    console.log(this.us.id_evento);
+    
+    
     this.eventService.dejarDeSeguir(id_usuario,id_evento).subscribe((data:any)=>{
      console.log(data);
       

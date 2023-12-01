@@ -80,6 +80,6 @@ export class EventosService {
 
   dejarDeSeguir(id_usuario:number,id_evento:number){
 
-    return this.http.request('delete' , this.urldelete, { body: { id :this.userService.user.id_user,id_evento}})
+    return this.http.request('delete' , this.urldelete, { body: { id :id_usuario, _id: id_evento}})
   }
 }
