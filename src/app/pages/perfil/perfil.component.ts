@@ -82,11 +82,13 @@ export class PerfilComponent {
     this.router.navigate(['/editar-perfil']);
   }
 
-  borrar(id_usuario:number,id_evento:number){
+  borrar(id_evento){
+    console.log(id_evento);
+    
 
-    this.eventService.dejarDeSeguir(id_usuario,id_evento).subscribe((data:any)=>{
+    this.eventService.dejarDeSeguir(id_evento).subscribe((data:any)=>{
      console.log(data);
-      
+      this.perfil = this.perfil.filter( val =>{ return val.id_eventos != id_evento })
     })
   }
  

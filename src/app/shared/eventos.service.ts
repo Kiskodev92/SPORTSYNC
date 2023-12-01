@@ -47,17 +47,17 @@ export class EventosService {
     return this.http.get(`${this.url}`);
   }
 
-  getOne(provincia: string){
+  getOne(provincia: string, titulo:string){
 
-    if(provincia !== undefined){
-      
-    console.log('Buscando por provincia desde el servicio');
-    return this.http.get(`${this.url2}?provincia=${provincia}`);
+    let url = this.url2
+    if(provincia && titulo){
+      url += `?provincia=${provincia}&titulo=${titulo}`
+    }else if(provincia){
+      url += `?provincia=${provincia}`
     }else{
-      console.log('busca otra manera');
-      
+      url += `?titulo=${titulo}`
     }
-    
+    return this.http.get(url)
   }
   
   getone2(titulo:string){
@@ -78,8 +78,10 @@ export class EventosService {
     return this,this.http.get(`${this.urlsportus}?id=${this.userService.user.id_user}`)
   }
 
-  dejarDeSeguir(id_usuario:number,id_evento:number){
+  dejarDeSeguir(id_evento:number){
 
-    return this.http.request('delete' , this.urldelete, { body: { id :this.userService.user.id_user,id_evento}})
+    console.log(id_evento);
+    
+    return this.http.request('delete' , this.urldelete, { body: { id_usuario :this.userService.user.id_user,id_evento:id_evento}})
   }
 }

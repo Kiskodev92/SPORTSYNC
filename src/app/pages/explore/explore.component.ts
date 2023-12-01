@@ -19,15 +19,11 @@ export class ExploreComponent {
     })
   }
 
-  buscar(provincia):void{
+  buscar(provincia,titulo):void{
     
-    if(provincia != 0)
+    if(provincia || titulo)
     {
-      console.log(provincia);
-      
-      console.log('entro a PROVINCIA desde el componente');
-
-      this.eventService.getOne(provincia).subscribe((data:any)=>{
+      this.eventService.getOne(provincia,titulo).subscribe((data:any)=>{
         console.log(data);
         this.home = data.data
       })
