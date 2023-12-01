@@ -75,7 +75,7 @@ export class EventosService {
 
   getSportUs(){
 
-    return this,this.http.get(`${this.urlsportus}?id=${this.userService.user.id_user}`)
+    return this.http.get(`${this.urlsportus}?id=${this.userService.user.id_user}`)
   }
 
   dejarDeSeguir(id_evento:number){
