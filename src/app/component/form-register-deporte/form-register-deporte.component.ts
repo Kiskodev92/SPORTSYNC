@@ -16,15 +16,17 @@ export class FormRegisterDeporteComponent {
   
   public deporte: Deporte;
   public deporteForm: FormGroup;
+  public valoresDeporte = {futbol: 1, escalada: 2, baloncesto:3, ciclismo: 4, runnig: 5, volley: 6, natacion: 7, patinaje: 8};
 
   constructor(public userService: UserService, public router: Router, private formBuilder: FormBuilder, public eventService: EventosService) {}
   
   obtenerValoresSeleccionados() {
     const valoresSeleccionados = Object.entries(this.deporteForm.value)
       .filter(([key, value]) => value)
-      .map(([key, value]) => key);
-  
-    console.log(valoresSeleccionados);
+      .map(([key, value]) => this.valoresDeporte[key]);
+      console.log(valoresSeleccionados);
+    
+      return valoresSeleccionados;
   }
     ngOnInit() {
     
@@ -36,6 +38,7 @@ export class FormRegisterDeporteComponent {
         natacion: [false],
         running: [false],
         ciclismo: [false],
+        escalada: [false],
       }, { validators: [this.OneSelectedValidator] });
     }
     
@@ -43,20 +46,23 @@ export class FormRegisterDeporteComponent {
       const values = Object.values(group.value);
       return values.includes(true) ? null : { OneSelected: true };
     }
-
     register() {
 
     
       if (this.deporteForm.valid) { 
-        
-        this.userService.postUsdep(new Usdep(0, this.userService.user.id_user, this.userService.deporte.id_deporte)).subscribe(() => {
+
+        const deportesSeleccionados = this.obtenerValoresSeleccionados();
+
+        this.userService.postUsdep( this.userService.idRegistro, deportesSeleccionados).subscribe(() => {
           console.log('Deportes registrados correctamente');
           
         });
         this.router.navigateByUrl('/login');
       }
-    } 
+    }
   }
+
+
 
 
   
