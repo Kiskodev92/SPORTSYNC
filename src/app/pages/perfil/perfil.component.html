@@ -23,9 +23,9 @@
     </div>
 
     <div class="datos">
-        <h4 class="Nombre">{{user.nombre}}</h4>
+        <h4 class="Nombre">{{user.nombre | mayus}}</h4>
         <h5 class="Sport">{{this.spoortUs}}</h5>
-        <h5 class="description">{{user.descripcion}}</h5>
+        <h5 class="description">{{user.descripcion | mayus}}</h5>
     </div>
 
     <div class="eventSeguid">
@@ -38,8 +38,8 @@
         <div  *ngFor="let per of eventPerfil" class="card" style="width: 18rem;" >
             <img src={{per.foto}} class="card-img-top">
             <div class="card-body">
-            <h5 class="card-title">{{per.titulo}}</h5>
-            <p class="card-text">{{per.fecha}}<br>{{per.descripcion}}</p>
+                <h5 class="card-title">{{per.titulo}}</h5>
+                <p class="card-text">{{per.fecha}}<br>{{per.descripcion}}</p>
             
             </div>
         </div>
@@ -54,13 +54,14 @@
 
             <img src={{eve.foto}} class="card-img-top">
             <div class="card-body">
-            <h5 class="card-title">{{eve.titulo}}</h5>
-            <p class="card-text">{{eve.fecha}}<br>{{eve.descripcion}}</p>
-            <button class="btn btn-dark" (click)="borrar(eve.id_eventos)">Dejar de Seguir</button>
-        </div>
+                <h5 class="card-title">{{eve.titulo}}</h5>
+                <p class="card-text">{{eve.fecha}}<br>{{eve.descripcion}}</p>
+                <button class="boton btn-dark" (click)="borrar(eve.id_eventos)">Dejar de Seguir</button>
+            </div>
        
       
-    </div>
+        </div>
     
+    </div>
+</main>    
 
-<app-nav-bar></app-nav-bar>

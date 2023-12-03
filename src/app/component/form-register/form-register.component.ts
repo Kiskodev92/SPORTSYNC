@@ -35,6 +35,8 @@ export class FormRegisterComponent {
        email: [, [Validators.required, Validators.email]],
        password: [, [Validators.required, Validators.minLength(minPassLength)]],
        provincia: [, Validators.required],
+       descripcion: [, Validators.required],
+       foto: [, Validators.required],
 
     });
 
