@@ -56,7 +56,7 @@
             <img src={{eve.foto}} class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">{{eve.titulo | mayus}}</h5>
-            <p class="card-text">{{eve.fecha}}<br>{{eve.descripcion | mayus}}</p>
+            <p class="card-text">{{eve.fecha | date}}<br>{{eve.descripcion | mayus}}</p>
             <button class="boton btn-dark" (click)="borrar(eve.id_eventos)">Dejar de Seguir</button>
             </div>
        
