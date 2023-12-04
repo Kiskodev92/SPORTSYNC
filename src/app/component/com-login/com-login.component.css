@@ -107,6 +107,7 @@
     .register{
         display: flex;
         padding-top: 15%;
+        gap: 5px;
     }
 
     .color{

@@ -9,6 +9,4 @@ import { UserService } from 'src/app/shared/user.service';
 export class NavBarComponent {
 
   constructor(public userService: UserService){}
-
-
 }

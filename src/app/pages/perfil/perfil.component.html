@@ -33,13 +33,14 @@
         <button (click)="mostrarContenido2()" type="button" class="btn-event">Seguidos</button>
     </div>
 
+    <div class="tarjetas">
     <div *ngIf="mostrarContenido === 1" >
     
         <div  *ngFor="let per of eventPerfil" class="card" style="width: 18rem;" >
             <img src={{per.foto}} class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">{{per.titulo}}</h5>
-                <p class="card-text">{{per.fecha}}<br>{{per.descripcion}}</p>
+            <h5 class="card-title">{{per.titulo | mayus}}</h5>
+            <p class="card-text">{{per.fecha}}<br>{{per.descripcion | mayus}}</p>
             
             </div>
         </div>
@@ -54,14 +55,15 @@
 
             <img src={{eve.foto}} class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">{{eve.titulo}}</h5>
-                <p class="card-text">{{eve.fecha}}<br>{{eve.descripcion}}</p>
-                <button class="boton btn-dark" (click)="borrar(eve.id_eventos)">Dejar de Seguir</button>
+            <h5 class="card-title">{{eve.titulo | mayus}}</h5>
+            <p class="card-text">{{eve.fecha}}<br>{{eve.descripcion | mayus}}</p>
+            <button class="boton btn-dark" (click)="borrar(eve.id_eventos)">Dejar de Seguir</button>
             </div>
        
       
         </div>
-    
     </div>
+    </div>
+
 </main>    
 
