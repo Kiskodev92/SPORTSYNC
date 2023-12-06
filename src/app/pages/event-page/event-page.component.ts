@@ -40,7 +40,7 @@ export class EventPageComponent {
     
    
     console.log(this.userService.user.id_user);
-    
+    console.log(fecha)
     
     
     this.eventService.postEvent( new Event(this.deporteSelect,this.userService.user.id_user,titulo,fecha,descripcion,foto,"")).subscribe((data: any) =>{
